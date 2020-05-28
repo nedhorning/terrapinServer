@@ -1,11 +1,14 @@
 const mongoose = require('mongoose')
 
 const trackerDataSchema = new mongoose.Schema({
-    latitude: {
-        type: Number
-    },
-    longitude: {
-        type: Number
+    // latitude: {
+    //     type: Number
+    // },
+    // longitude: {
+    //     type: Number
+    // },
+    location: {
+        type: JSON
     },
     altitude: {
         type: Number

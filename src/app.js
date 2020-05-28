@@ -17,8 +17,9 @@ app.post('/data', (req, res) => {
     console.log(data);
     if (data.object.gpsLocation[1].latitude) {  // If there is a node GPS location write to the database
         const trackerData = new TrackerData({
-            latitude: data.object.gpsLocation[1].latitude,
-            longitude: data.object.gpsLocation[1].longitude,
+            //latitude: data.object.gpsLocation[1].latitude,
+            //longitude: data.object.gpsLocation[1].longitude,
+            location: {type: "Point", coordinates: [data.object.gpsLocation[1].longitude, data.object.gpsLocation[1].latitude]},
             altitude: data.object.gpsLocation[1].altitude,
             epe: data.object.analogInput[2],
             timeToFix: data.object.analogInput[3],
