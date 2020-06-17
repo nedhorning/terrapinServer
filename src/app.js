@@ -1,9 +1,12 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const fs = require('fs')
 const TrackerData = require('./models/trackerData')
 
 const app = express()
 const port = process.env.PORT
+
+var date = new Date();
 
 mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
@@ -12,6 +15,7 @@ mongoose.connect(process.env.MONGODB_URL, {
 
 app.use(express.json())
 
+fs.writeFileSync('test.txt', '')
 app.post('/data', (req, res) => {
     const data = req.body
     console.log(data);
@@ -27,7 +31,8 @@ app.post('/data', (req, res) => {
             isHighTide: data.object.digitalInput[5],
             deviceName: data.deviceName,
             deviceEUI: data.devEUI,
-            packageTime: data.rxInfo[0].time,     
+            //packageTime: data.rxInfo[0].time, 
+            packageTime: Date.getTime(),    
             rssi: data.rxInfo[0].rssi    
         })
         
@@ -36,6 +41,10 @@ app.post('/data', (req, res) => {
         }).catch((error) => {
             console.log('Error', error)
         })
+        fs.appendFile('test.txt', trackerData, function (err) {
+            if (err) throw err;
+            console.log('Saved!');
+          });
     }
 });
 
