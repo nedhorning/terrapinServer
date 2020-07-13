@@ -26,7 +26,7 @@ app.post('/data', (req, res) => {
             location: {type: "Point", coordinates: [data.object.longitude, data.object.latitude]},
             altitude: data.object.altitude,
             epe: data.object.epe,
-            timeToFix: data.objecttimeToFix,
+            timeToFix: data.object.timeToFix,
             isFreshGPS: data.object.freshGPS,
             isHighTide: data.object.isHighTide,
             gpsTime: data.object.time,
