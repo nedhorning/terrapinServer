@@ -25,6 +25,9 @@ const trackerDataSchema = new mongoose.Schema({
     isHighTide: {
         type: Boolean
     },
+    gpsTime: {
+        type: Number
+    },
     deviceName: {
         type: String
     },

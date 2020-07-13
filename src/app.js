@@ -19,20 +19,21 @@ fs.writeFileSync('test.txt', '')
 app.post('/data', (req, res) => {
     const data = req.body
     console.log(data);
-    if (data.object.gpsLocation[1].latitude) {  // If there is a node GPS location write to the database
+    if (data.object.latitude) {  // If there is a node GPS location write to the database
         const trackerData = new TrackerData({
             //latitude: data.object.gpsLocation[1].latitude,
             //longitude: data.object.gpsLocation[1].longitude,
-            location: {type: "Point", coordinates: [data.object.gpsLocation[1].longitude, data.object.gpsLocation[1].latitude]},
-            altitude: data.object.gpsLocation[1].altitude,
-            epe: data.object.analogInput[2],
-            timeToFix: data.object.analogInput[3],
-            isFreshGPS: data.object.digitalInput[4],
-            isHighTide: data.object.digitalInput[5],
+            location: {type: "Point", coordinates: [data.object.longitude, data.object.latitude]},
+            altitude: data.object.altitude,
+            epe: data.object.epe,
+            timeToFix: data.objecttimeToFix,
+            isFreshGPS: data.object.freshGPS,
+            isHighTide: data.object.isHighTide,
+            gpsTime: data.object.time,
             deviceName: data.deviceName,
             deviceEUI: data.devEUI,
             //packageTime: data.rxInfo[0].time, 
-            packageTime: Date.getTime(),    
+            packageTime: date.getTime(),    
             rssi: data.rxInfo[0].rssi    
         })
         
