@@ -6,7 +6,7 @@ const TrackerData = require('./models/trackerData')
 const app = express()
 const port = process.env.PORT
 
-var date = new Date();
+//var date = new Date();
 
 mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
@@ -32,8 +32,8 @@ app.post('/data', (req, res) => {
             gpsTime: data.object.time,
             deviceName: data.deviceName,
             deviceEUI: data.devEUI,
-            //packageTime: data.rxInfo[0].time, 
-            packageTime: date.getTime(),    
+            packageTime: data.rxInfo[0].time, 
+            //packageTime: date.getTime(),    
             rssi: data.rxInfo[0].rssi    
         })
         

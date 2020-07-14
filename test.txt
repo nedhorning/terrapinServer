@@ -1,0 +1,43 @@
+{
+  _id: 5f0de2817b7ed270d3a005e3,
+  location: { type: 'Point', coordinates: [ -73.153576, 43.992704 ] },
+  altitude: 584.267008,
+  epe: 17.96,
+  timeToFix: 3,
+  isFreshGPS: true,
+  isHighTide: false,
+  gpsTime: 1594745472,
+  deviceName: 'GnatCustom',
+  deviceEUI: '383434306a379301',
+  packageTime: 2020-07-14T16:52:02.667Z,
+  rssi: -109,
+  __v: 0
+}{
+  _id: 5f0de2b87b7ed270d3a005e4,
+  location: { type: 'Point', coordinates: [ -73.153576, 43.992812 ] },
+  altitude: 587.632,
+  epe: 23.7,
+  timeToFix: 3,
+  isFreshGPS: true,
+  isHighTide: false,
+  gpsTime: 1594745527,
+  deviceName: 'GnatCustom',
+  deviceEUI: '383434306a379301',
+  packageTime: 2020-07-14T16:52:52.671Z,
+  rssi: -105,
+  __v: 0
+}{
+  _id: 5f0de2f47b7ed270d3a005e5,
+  location: { type: 'Point', coordinates: [ -73.153464, 43.99282 ] },
+  altitude: 577.677952,
+  epe: 27.43,
+  timeToFix: 3,
+  isFreshGPS: true,
+  isHighTide: false,
+  gpsTime: 1594745587,
+  deviceName: 'GnatCustom',
+  deviceEUI: '383434306a379301',
+  packageTime: 2020-07-14T16:53:52.670Z,
+  rssi: -105,
+  __v: 0
+}
