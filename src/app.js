@@ -30,6 +30,7 @@ app.post('/data', (req, res) => {
             isFreshGPS: data.object.freshGPS,
             isHighTide: data.object.isHighTide,
             gpsTime: data.object.time,
+            vbat: data.object.vbat,
             deviceName: data.deviceName,
             deviceEUI: data.devEUI,
             packageTime: data.rxInfo[0].time, 

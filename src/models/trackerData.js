@@ -28,6 +28,9 @@ const trackerDataSchema = new mongoose.Schema({
     gpsTime: {
         type: Number
     },
+    vbat: {
+        type: Number
+    },
     deviceName: {
         type: String
     },
