@@ -26,6 +26,8 @@ app.post('/data', (req, res) => {
             isHighTide: dataObject.isHighTide,
             gpsTime: dataObject.time,
             vbat: dataObject.vbat,
+            temp: dataObject.temp,
+            resetCounter: dataObject.resetCounter,
             deviceName: data.deviceName,
             deviceEUI: Buffer.from(data.devEUI, 'base64').toString('hex'),  
             packageTime: data.rxInfo[0].time,  

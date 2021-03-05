@@ -31,6 +31,12 @@ const trackerDataSchema = new mongoose.Schema({
     vbat: {
         type: Number
     },
+    temp: {
+        type: Number
+    },
+    resetCounter: {
+        type: Number
+    },
     deviceName: {
         type: String
     },
@@ -45,6 +51,6 @@ const trackerDataSchema = new mongoose.Schema({
     }
 })
 
-const TrackerData = mongoose.model('TrackerData', trackerDataSchema)
+const TrackerData = mongoose.model('TrackerData', trackerDataSchema)  // String in quotes is collection name in mongoDB
 
 module.exports = TrackerData
