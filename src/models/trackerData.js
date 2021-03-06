@@ -51,6 +51,6 @@ const trackerDataSchema = new mongoose.Schema({
     }
 })
 
-const TrackerData = mongoose.model('TrackerData', trackerDataSchema)  // String in quotes is collection name in mongoDB
+const TrackerData = mongoose.model('TrackerData2', trackerDataSchema)  // String in quotes is collection name in mongoDB
 
 module.exports = TrackerData
