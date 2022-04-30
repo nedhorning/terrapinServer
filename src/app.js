@@ -23,7 +23,6 @@ app.post('/data', (req, res) => {
             epe: dataObject.epe,
             timeToFix: dataObject.timeToFix,
             isFreshGPS: dataObject.freshGPS,
-            isHighTide: dataObject.isHighTide,
             gpsTime: dataObject.time,
             vbat: dataObject.vbat,
             temp: dataObject.temp,
