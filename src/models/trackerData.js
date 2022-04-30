@@ -48,6 +48,10 @@ const trackerDataSchema = new mongoose.Schema({
     }
 })
 
+<<<<<<< HEAD
 const TrackerData = mongoose.model('BlandingsData', trackerDataSchema)  // String in quotes is collection name in mongoDB
+=======
+const TrackerData = mongoose.model('KiawahIsland2021', trackerDataSchema)  // String in quotes is collection name in mongoDB
+>>>>>>> f33b56283d25de6bb84e03692b6ab4416d3fba43
 
 module.exports = TrackerData
